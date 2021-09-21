@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script src="funcoes.js"></script>
+<script>
+    var i, j, idade, peso, altura, menor18 = 0,
+        somaIdadesTime = 0,
+        mediaIdadesTime = 0,
+        mediaAlturasCamp = 0,
+        somaAlturas = 0,
+        somaPesos = 0,
+        percentual80kg,
+        jogadores = 0
+    document.write('Campeonato<hr>')
+    for (i = 1; i <= 5; i++) {
+        alert("Dados do time " + i)
+        for (j = 1; j <= 5; j++) {
+            idade = Number(prompt('Informe a idade do jogador ' + j))
+            peso = Number(prompt('Informe o peso do jogador ' + j))
+            altura = Number(prompt('Informe a altura do jogador ' + j + ' (Em metros)'))
+            somarPesos()
+            jogadoresMenor18()
+            somaIdades()
+            mediaIdadesDoTime()
+            zerarSomasIdades()
+            somarAlturas()
+            mediaAlturas()
+            somarJogadores()
+
+        }
+
+        document.write('Média das idades do time ', i, ' é: ', mediaIdadesTime.toFixed(2), '<br>')
+
+    }
+    porcPesoAcima80()
+
+    document.write('O número de jogadores do campeonato menores de 18 anos é: ', menor18, '<br>')
+    document.write('A média das alturas dos jogadores do campeonato é ', mediaAlturasCamp.toFixed(2), ' Metros<br>')
+    document.write('A porcentagem dos jogadores do time acima de 80kg é :', percentual80kg.toFixed(2), '%')
+</script>
